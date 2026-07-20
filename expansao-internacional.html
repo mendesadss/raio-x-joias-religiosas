@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expansão internacional · Qual mercado atacar</title>
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<nav class="nav"><div class="wrap">
+<a href="index.html" class="home">◆ Painel</a>
+<a href="estrategia.html">★ Estratégia</a>
+<a href="plano-de-acao.html">🎯 Plano de Ação</a>
+<a href="expansao-internacional.html" class="on">🌍 Mercados</a>
+<a href="loja-lunavere.html">Lunavere</a>
+<a href="loja-cartworkshop.html">Christian Art Workshop</a>
+</div></nav>
+
+<header><div class="wrap">
+<div class="tag">Dados reais da Ad Library pública · 20/07/2026</div>
+<h1>Qual país atacar,<br>e em <em>qual idioma</em></h1>
+<p class="sub">Medição de 9 países com termo amplo (tamanho do mercado) contra termos de rito (concorrência no ângulo). O resultado contraria a intuição.</p>
+<div class="meta"><span>Ad Library pública via Playwright</span><span>Mendes OS</span></div>
+</div></header>
+
+<section><div class="wrap">
+<h2><span class="n">01</span>O método</h2>
+<p class="lead">Contagem de anúncios <b>ativos</b> na Ad Library pública da Meta, país a país, em idioma nativo. Duas medições por país:</p>
+<div class="grid g2">
+<div class="card">
+<b style="color:var(--acc)">Termo amplo</b>
+<p style="color:var(--dim);font-size:14px;margin-top:8px">Ex: "collar regalo mujer", "naszyjnik prezent". Mede <b>o tamanho do mercado de joia</b> naquele país no Meta. Responde: existe gente comprando joia por anúncio aqui?</p>
+</div>
+<div class="card">
+<b style="color:var(--acc)">Termos de rito</b>
+<p style="color:var(--dim);font-size:14px;margin-top:8px">Ex: "regalo primera comunión", "prezent na chrzest". Mede <b>a concorrência no ângulo específico</b> da estratégia. Responde: alguém já está fazendo isso aqui?</p>
+</div>
+</div>
+<div class="note good"><b>A métrica que decide é a razão entre os dois.</b> Rito ÷ amplo mostra quão explorado está o ângulo <b>em relação ao tamanho do mercado</b>. Razão baixa com mercado grande é o alvo: tem dinheiro circulando e ninguém no ângulo.</div>
+</div></section>
+
+<section><div class="wrap">
+<h2><span class="n">02</span>Os números</h2>
+<div class="tblwrap">
+<table>
+<thead><tr><th>País</th><th>Mercado de joia<br><span style="font-weight:400;text-transform:none">(termo amplo)</span></th><th>Ângulo de rito<br><span style="font-weight:400;text-transform:none">(termos específicos)</span></th><th>Razão</th><th>Leitura</th></tr></thead>
+<tbody>
+<tr style="background:rgba(74,222,128,.07)"><td><b>🇪🇸 Espanha</b></td><td class="num">2.500</td><td class="num up">10</td><td class="num up">0,40%</td><td><b>Melhor assimetria.</b> Mercado sólido, ângulo praticamente vazio</td></tr>
+<tr><td>🇺🇸 EUA</td><td class="num">32.000</td><td class="num">144</td><td class="num">0,45%</td><td>Razão boa, mas volume absoluto de disputa é 14x maior</td></tr>
+<tr style="background:rgba(74,222,128,.05)"><td><b>🇵🇱 Polônia</b></td><td class="num">2.000</td><td class="num">26</td><td class="num">1,30%</td><td><b>Segunda melhor.</b> Mercado bom, rito pouco explorado</td></tr>
+<tr><td>🇩🇪 Alemanha</td><td class="num down">400</td><td class="num">~6</td><td class="num">1,50%</td><td>Mercado de joia <b>80x menor</b> que os EUA. Fraco</td></tr>
+<tr><td>🇧🇷 Brasil</td><td class="num">1.900</td><td class="num">32</td><td class="num">1,68%</td><td>Mercado ok, mas ticket em real muda toda a conta</td></tr>
+<tr><td>🇲🇽 México</td><td class="num">2.900</td><td class="num">69</td><td class="num">2,38%</td><td>Ângulo <b>já sendo trabalhado</b>. Prova que funciona</td></tr>
+<tr><td>🇫🇷 França</td><td class="num">750</td><td class="num">26</td><td class="num">3,47%</td><td>Mercado pequeno e ângulo já ocupado</td></tr>
+<tr style="background:rgba(248,113,113,.05)"><td>🇮🇹 Itália</td><td class="num down">240</td><td class="num">18</td><td class="num down">7,50%</td><td><b>Pior dos dois lados.</b> Mercado minúsculo e já saturado no rito</td></tr>
+<tr><td>🇵🇹 Portugal</td><td>—</td><td class="num">16</td><td>—</td><td>Mercado pequeno demais para operação isolada</td></tr>
+</tbody>
+</table>
+</div>
+<p style="font-size:13px;color:var(--dim2);margin-top:12px">Contagens de anúncios ativos que casam com a palavra-chave, medidas na Ad Library pública. É uma métrica diferente da contagem por página usada no painel (que soma todos os criativos de um anunciante), mas é <b>consistente entre países</b>, que é o que importa aqui.</p>
+</div></section>
+
+<section><div class="wrap">
+<h2><span class="n">03</span>O que isso muda</h2>
+
+<div class="op">
+<div class="r">Correção da recomendação anterior</div>
+<h3>Eu apostei em Polônia e Itália por demografia. Os dados dizem Espanha.</h3>
+<p style="color:var(--dim);margin-bottom:12px">Meu raciocínio anterior foi: Polônia tem 92% de católicos, Itália 67%, Espanha só 45%, logo Polônia e Itália primeiro. <b style="color:var(--txt)">Estava usando devoção como proxy de oportunidade, e isso é errado.</b></p>
+<p style="color:var(--dim);margin-bottom:12px">O que decide não é quantos são católicos, é <b style="color:var(--txt)">quantos compram joia por anúncio no Meta</b>. E aí a Itália, apesar dos 67% de católicos, tem um mercado de apenas 240 anúncios de joia, contra 2.500 da Espanha. Dez vezes menor.</p>
+<p style="color:var(--dim)"><b style="color:var(--acc)">Espanha tem o mercado de joia mais maduro entre os candidatos europeus e o ângulo de rito quase intocado (10 anúncios).</b> É a combinação que eu procurava.</p>
+</div>
+
+<div class="note good"><b>E tem uma validação cruzada que reduz muito o risco.</b> O México roda <b>69 anúncios</b> no ângulo de rito em espanhol, contra 10 da Espanha. Isso significa que alguém já está ganhando dinheiro vendendo "regalo primera comunión" em espanhol, com mercado de tamanho parecido (2.900 contra 2.500). O ângulo está <b>comercialmente provado no idioma</b>, e a Espanha tem 7x menos concorrência. Você não está apostando num mercado não testado, está entrando por um lado que ninguém cobriu.</div>
+
+<div class="note danger"><b>A Alemanha está fora, e eu preciso ser claro nisso.</b> O mercado alemão de joia no Meta tem <b>400 anúncios ativos</b>, contra 32.000 dos EUA e 2.500 da Espanha. Ela funcionou no nicho de calçados ortopédicos por ser assimetria de concorrência num mercado que existia. Aqui não existe mercado de joia relevante para atacar. Não repita a receita anterior sem checar o contexto de cada categoria.</div>
+
+<div class="note"><b>A Itália é o pior cenário possível.</b> Mercado minúsculo (240) e o ângulo de rito já ocupado (18), o que dá a maior razão de saturação de todas: 7,5%. Devoção alta não compensa mercado digital pequeno.</div>
+</div></section>
+
+<section><div class="wrap">
+<h2><span class="n">04</span>Inglês ou idioma nativo?</h2>
+<div class="op" style="background:linear-gradient(135deg,rgba(96,165,250,.09),rgba(96,165,250,.02));border-color:rgba(96,165,250,.3)">
+<div class="r">Resposta</div>
+<h3 style="color:var(--info)">Nativo, e não é preferência estética. É estrutural.</h3>
+<ul class="cl">
+<li><b>O ângulo depende de palavras culturalmente carregadas.</b> <i>Primera Comunión, Pierwsza Komunia, Erstkommunion, Bierzmowanie.</i> Não existe tradução emocional dessas palavras para o inglês</li>
+<li><b>O avatar é mulher de 45 a 70 anos</b>, justamente a faixa que menos fala inglês fora dos países anglófonos. Criativo em inglês desperdiça quem mais compra</li>
+<li><b>O dado confirma:</b> os 69 anúncios do México e os 26 da Polônia estão todos em idioma local. Ninguém escala rito em inglês fora dos EUA</li>
+</ul>
+</div>
+<div class="note"><b>Mas não traduza para cinco idiomas de uma vez.</b> Cada idioma multiplica criativo, landing, suporte e avaliação. A ordem importa mais que a quantidade.</div>
+</div></section>
+
+<section><div class="wrap">
+<h2><span class="n">05</span>A sequência recomendada</h2>
+<ol class="steps">
+<li><b>EUA em inglês</b>, como está no plano de ação. É onde você tem mais concorrente para estudar e copiar, e onde valida a oferta.</li>
+<li><b>Espanhol no público hispânico dos EUA.</b> Mesma loja, mesma moeda, mesmo frete, mesmo checkout. Você só troca o criativo. É o teste mais barato possível da hipótese "idioma nativo converte melhor", com custo marginal quase zero. E o México prova que o ângulo funciona em espanhol.</li>
+<li><b>Espanha</b> se o passo 2 confirmar. Mercado de 2.500 com apenas 10 no ângulo. Aqui você já tem criativo em espanhol pronto do passo 2, e só precisa resolver moeda em euro e frete europeu.</li>
+<li><b>Polônia</b> como segunda aposta europeia. Mercado de 2.000 com 26 no ângulo, e a Primeira Comunhão polonesa é o rito com maior tradição de presente caro da Europa. Exige operação nova de verdade (polonês, zloty, frete, suporte).</li>
+<li><b>Não vá</b> para Alemanha (mercado de joia pequeno demais), Itália (pequeno e saturado) ou França (pequeno e ocupado).</li>
+</ol>
+<div class="note good"><b>Por que o passo 2 é a jogada.</b> Ele responde a sua pergunta ("inglês ou nativo?") gastando quase nada, sem montar operação internacional. Se o criativo em espanhol converter melhor que o em inglês no mesmo público geográfico, você comprovou a tese e já tem o ativo pronto para abrir a Espanha. Se não converter, você economizou meses de operação europeia.</div>
+</div></section>
+
+<section><div class="wrap">
+<h2><span class="n">06</span>Limitações desta medição</h2>
+<div class="tblwrap">
+<table>
+<thead><tr><th>Limitação</th><th>Detalhe</th></tr></thead>
+<tbody>
+<tr><td><b>Conector oficial fora do ar</b></td><td>O MCP da Meta desconectou nesta sessão. Usei a <b>Ad Library pública via navegador</b> como fallback, que é fonte oficial mas expõe contagem por palavra-chave, não por página. As contagens não são comparáveis com as do painel (que somam criativos por anunciante), mas são consistentes entre si.</td></tr>
+<tr><td><b>Alemanha parcialmente medida</b></td><td>Dois dos três termos de rito não retornaram contagem parseável. O valor de ~6 vem do termo que respondeu. Como o termo amplo (400) já elimina o país, não insisti.</td></tr>
+<tr><td><b>Termos podem subdimensionar</b></td><td>Usei de 2 a 3 termos por país. Um levantamento definitivo pediria 6 a 8 por idioma. A ordem de grandeza está certa; o número exato, não.</td></tr>
+<tr><td><b>Não medi concorrentes por página</b></td><td>Sem o conector, não consegui identificar <b>quais lojas</b> dominam cada país nem o histórico delas. Isso fica pendente para quando o MCP voltar.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="note"><b>O que eu faria antes de comprometer caixa na Espanha:</b> re-rodar com o conector oficial para identificar as lojas específicas que rodam os 10 anúncios de rito lá, e fazer o raio-x delas. Dez anúncios podem ser uma loja forte ou cinco lojas fracas, e isso muda a estratégia de entrada.</div>
+</div></section>
+
+<footer><div class="wrap">
+<p><a href="plano-de-acao.html">← Plano de Ação</a> · <a href="index.html">Painel</a></p>
+<p style="margin-top:12px">Contagens medidas na Ad Library pública da Meta em 20/07/2026 via Playwright. Demografia católica de fontes públicas. Benchmarks de CPM de relatórios de mercado 2026.</p>
+<p style="margin-top:12px;color:var(--dim2)">Mendes OS · Criador de Ofertas</p>
+</div></footer>
+</body></html>
