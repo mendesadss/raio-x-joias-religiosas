@@ -1,0 +1,66 @@
+{
+ "christian jewelry [US]": {
+  "razao": 1.37,
+  "label": "crescente",
+  "media_ini": 37.1,
+  "media_fim": 50.8,
+  "pico": 100,
+  "n": 53
+ },
+ "christian jewelry [GB]": {
+  "razao": 2.7,
+  "label": "crescente",
+  "media_ini": 1.5,
+  "media_fim": 4.2,
+  "pico": 100,
+  "n": 53
+ },
+ "cross necklace [US]": {
+  "razao": 1.23,
+  "label": "crescente",
+  "media_ini": 37.8,
+  "media_fim": 46.6,
+  "pico": 100,
+  "n": 53
+ },
+ "cross necklace [GB]": {
+  "razao": 0.96,
+  "label": "estável",
+  "media_ini": 45.8,
+  "media_fim": 43.8,
+  "pico": 100,
+  "n": 53
+ },
+ "regalo primera comunion [MX]": {
+  "razao": null,
+  "label": "estável",
+  "media_ini": 0.0,
+  "media_fim": 12.1,
+  "pico": 100,
+  "n": 53
+ },
+ "regalo primera comunion [ES]": {
+  "razao": null,
+  "label": "estável",
+  "media_ini": 0.0,
+  "media_fim": 22.2,
+  "pico": 100,
+  "n": 53
+ },
+ "cadeau communion [FR]": {
+  "razao": null,
+  "label": "estável",
+  "media_ini": 0.0,
+  "media_fim": 44.2,
+  "pico": 100,
+  "n": 53
+ },
+ "taufe kette [DE]": {
+  "razao": 3.86,
+  "label": "crescente",
+  "media_ini": 5.0,
+  "media_fim": 19.3,
+  "pico": 100,
+  "n": 53
+ }
+}
