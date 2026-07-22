@@ -57,20 +57,22 @@ faixa $30.0 a $80.0</p></div></div>
 </tbody></table></div>
 <div class="note"><b>Cadência.</b> variacoes sazonais do mesmo template (Anniversary/Easter/Valentines/Spring)</div>
 
+<h3>Tráfego real (SimilarWeb) <span style="color:var(--dim2);font-weight:400;font-size:13px">· dado parcial do SimilarWeb público (loja pequena)</span></h3>
+<div class="grid g4"><div class="stat"><div class="v sm">20K</div><div class="l">visitas/mês</div></div><div class="stat"><div class="v sm">100%</div><div class="l">taxa de rejeição</div><div class="d">1.00 págs/visita</div></div></div>
 
-<h3>Faturamento mensal estimado <span class="pill p-b">estimado por proxy</span></h3>
+<h3>Faturamento mensal estimado <span class="pill p-a">medido</span></h3>
 <div class="grid g4">
-<div class="stat"><div class="v sm">$38K a $100K</div><div class="l">receita bruta/mês</div><div class="d">proxy de mídia + reviews</div></div>
-<div class="stat"><div class="v sm">~$63K</div><div class="l">cenário central</div><div class="d">receita, não lucro</div></div>
+<div class="stat"><div class="v sm">$10K a $21K</div><div class="l">receita bruta/mês</div><div class="d">SimilarWeb · medido (parcial)</div></div>
+<div class="stat"><div class="v sm">~$14K</div><div class="l">cenário central</div><div class="d">receita, não lucro</div></div>
 </div>
-<div class="note"><b>Como foi estimado:</b> esta loja está abaixo do limiar do SimilarWeb (tráfego não medível). Uso o proxy de mídia: <b>criativos únicos ativos</b> (anúncios ativos ÷ fator de duplicação) multiplicado pela receita por criativo do líder, que tem tráfego medido. É <b>ordem de grandeza, não número exato</b>. Cruzado com a contagem de reviews (169 só no produto campeão): o proxy de review coloca a loja na mesma ordem de grandeza, o que reforça a confiança.</div>
+<div class="note">~20 mil visitas/mês (piso do público). O engajamento veio degradado (bounce 100%, dado não confiável), então uso só o volume de visitas. O proxy antigo estimava $63K.</div>
 
 <h3>Custo de tráfego e investimento em mídia</h3>
 <div class="grid g4">
 <div class="stat"><div class="v sm">$9,23</div><div class="l">CPM · benchmark</div><div class="d">Fashion / apparel · EUA · 2026</div></div>
 <div class="stat"><div class="v sm">$0,45</div><div class="l">CPC · benchmark</div></div>
 <div class="stat"><div class="v sm">10,6%</div><div class="l">CPA · % da receita</div><div class="d">IRP Fashion, jun/2026</div></div>
-<div class="stat" style="border-color:var(--acc)"><div class="v sm">$4,0K a $11K</div><div class="l">gasto em mídia/mês (est.)</div><div class="d">~$6,7K no cenário central</div></div>
+<div class="stat" style="border-color:var(--acc)"><div class="v sm">$1,1K a $2,2K</div><div class="l">gasto em mídia/mês (est.)</div><div class="d">~$1,5K no cenário central</div></div>
 </div>
 <div class="note"><b>Investimento em anúncio, estimado.</b> Gasto ≈ receita × <b>10,6%</b> (o quanto o setor de apparel gasta em mídia como fração da receita, benchmark IRP). Como parte da receita acima já é estimada por proxy, este gasto herda a mesma incerteza. Não apresento ROAS: com o gasto derivado da receita por um percentual fixo, o ROAS seria sempre <code>1÷10,6%</code> por construção (tautologia), não um achado.</div>
 <h3>Ângulos ativos</h3><div class="tblwrap"><table><thead><tr><th>Headline</th></tr></thead><tbody><tr><td>"Anniversary Sale 🤍 Buy 1 Get 1 Free"</td></tr><tr><td>"Grab the Perfect Gift for her in the Easter/Valentines/Spring Sale 🤍"</td></tr></tbody></table></div>
@@ -122,7 +124,7 @@ faixa $30.0 a $80.0</p></div></div>
 
 <section><div class="wrap"><h2><span class="n">06</span>Dados não obtidos</h2>
 <p class="lead">Transparência sobre os limites desta ficha. Cada linha mostra o que faltou, por quê, e o que foi tentado.</p>
-<div class="tblwrap"><table><thead><tr><th>Dado</th><th>Motivo</th><th>Método tentado</th></tr></thead><tbody><tr><td><b>Visitas mensais (SimilarWeb)</b></td><td>domínio abaixo do limiar de medição do SimilarWeb</td><td>Navegador real (Playwright) com pausas longas. Operações pequenas e recentes não entram no SimilarWeb; o Tranco confirma tráfego abaixo do limiar. Impacto: faturamento estimado só por proxy de anúncios.</td></tr><tr><td><b>Pixel ID da Meta</b></td><td>não encontrado no HTML da home</td><td>Regex no HTML. O pixel é carregado via GTM ou via Customer Events do Shopify, que não expõe o ID no fonte.</td></tr></tbody></table></div>
+<div class="tblwrap"><table><thead><tr><th>Dado</th><th>Motivo</th><th>Método tentado</th></tr></thead><tbody><tr><td><b>Pixel ID da Meta</b></td><td>não encontrado no HTML da home</td><td>Regex no HTML. O pixel é carregado via GTM ou via Customer Events do Shopify, que não expõe o ID no fonte.</td></tr></tbody></table></div>
 </div></section>
 
 <section><div class="wrap"><h2><span class="n">07</span>Veredito e classificação</h2>
