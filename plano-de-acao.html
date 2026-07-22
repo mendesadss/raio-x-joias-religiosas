@@ -299,14 +299,16 @@
 .bar .dot{width:9px;height:9px;border-radius:50%;background:#d9534f;flex:none}
 .bar .dot.y{background:#f0ad4e}.bar .dot.g{background:#5cb85c}
 .bar .url{flex:1;background:var(--bg);border:1px solid var(--line);border-radius:5px;padding:4px 9px;font-size:10.5px;color:var(--dim2);font-family:ui-monospace,Menlo,monospace;text-align:center;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
-/* moldura de celular */
-.phone{width:300px;max-width:100%;border:9px solid #17181c;border-radius:34px;background:#17181c;box-shadow:0 14px 36px rgba(0,0,0,.30);position:relative;padding-top:18px}
-.phone::before{content:'';position:absolute;top:7px;left:50%;transform:translateX(-50%);width:78px;height:5px;border-radius:3px;background:#3a3b40}
-/* palco escalado: o iframe renderiza na largura real do dispositivo e é reduzido pra caber */
+/* moldura de celular — renderiza na largura REAL de um celular (sem encolher) */
+.phone{width:380px;max-width:100%;border:8px solid #17181c;border-radius:36px;background:#17181c;box-shadow:0 14px 36px rgba(0,0,0,.30);position:relative;padding-top:20px}
+.phone::before{content:'';position:absolute;top:8px;left:50%;transform:translateX(-50%);width:82px;height:5px;border-radius:3px;background:#3a3b40}
 .shot{position:relative;overflow:hidden;background:#F5EFE6}
+/* desktop: palco de 1280 reduzido via JS pra caber lado a lado */
 .shot.desk{height:440px}
-.phone .shot{height:600px;border-radius:0 0 24px 24px}
-.shot iframe{border:0;display:block}
+.shot.desk iframe{border:0;display:block}
+/* celular: iframe em tamanho nativo, responsividade de verdade, SEM scale */
+.phone .shot{height:660px;border-radius:0 0 26px 26px}
+.phone .shot iframe{width:100%;height:100%;border:0;display:block}
 @media(max-width:720px){.bprow{grid-template-columns:1fr;gap:26px}.shot.desk{height:380px}}
 </style>
 
@@ -350,8 +352,10 @@
 
 <script>
 (function(){
+  // so os frames DESKTOP sao escalados (1280 -> largura da coluna).
+  // os frames de CELULAR renderizam nativos, sem scale = responsividade real.
   function fit(){
-    document.querySelectorAll('.bpv .shot').forEach(function(sh){
+    document.querySelectorAll('.bpv .shot.desk').forEach(function(sh){
       var base=+sh.getAttribute('data-base'), w=sh.clientWidth, h=sh.clientHeight;
       if(!w||!h) return;
       var s=w/base, ifr=sh.querySelector('iframe');
