@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mockup · Página de Produto · Amada</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --marfim:#F5EFE6; --bordo:#6E1423; --ouro:#C6A15B; --carvao:#2B2B2E; --salvia:#8A9A7B;
+  --marfim2:#EFE7DA; --line:#E1D7C6;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--marfim);color:var(--carvao);font-family:'Inter',system-ui,sans-serif;line-height:1.55;padding-bottom:64px}
+h1,h2,h3,.serif{font-family:'Cormorant Garamond','Times New Roman',serif}
+img{max-width:100%;display:block}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+.ph{position:relative;background:radial-gradient(120% 120% at 30% 20%, #fbf6ee 0%, #efe3d0 45%, #e3cfb2 100%);
+    border:1px solid var(--line);overflow:hidden}
+.ph::after{content:attr(data-cap);position:absolute;left:10px;bottom:8px;right:10px;
+    font-size:10.5px;letter-spacing:.04em;color:#8a7a63;background:rgba(255,255,255,.55);padding:3px 7px;border-radius:5px}
+
+.ann{background:var(--bordo);color:var(--marfim);text-align:center;font-size:12px;letter-spacing:.05em;padding:9px 12px}
+.ann b{color:var(--ouro)}
+.hd{background:var(--marfim);border-bottom:1px solid var(--line)}
+.hd .wrap{display:flex;align-items:center;justify-content:space-between;padding:16px 24px}
+.logo{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:600;color:var(--bordo)}
+.nav{display:flex;gap:26px;font-size:12.5px;color:var(--carvao)}
+.btn{display:block;width:100%;background:var(--bordo);color:var(--marfim);font-weight:600;
+    padding:16px;border:none;border-radius:2px;font-size:13px;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;text-align:center}
+.btn.gold{background:var(--ouro);color:#3a2a10}
+.ey{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--ouro);font-weight:600}
+.crumb{font-size:11.5px;color:#8a7a63;padding:16px 0;letter-spacing:.03em}
+
+/* layout principal 2 colunas */
+.main{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;padding-top:8px}
+
+/* galeria */
+.gal .ph{height:460px;border-radius:4px}
+.thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px}
+.thumbs .ph{height:82px;border-radius:3px}
+.thumbs .ph::after{display:none}
+
+/* info */
+.title{font-size:40px;color:var(--bordo);line-height:1.05;margin:6px 0 10px}
+.stars{color:var(--ouro);font-size:14px;letter-spacing:2px}
+.stars small{color:#8a7a63;font-family:'Inter';letter-spacing:0;margin-left:8px}
+.price{margin:16px 0;font-size:15px}
+.price s{color:#a89a86;margin-right:10px}
+.price b{font-size:30px;color:var(--carvao);font-family:'Cormorant Garamond',serif;font-weight:600}
+.price .save{background:var(--salvia);color:#1e2418;font-size:11px;font-weight:600;padding:3px 9px;border-radius:3px;margin-left:10px;letter-spacing:.04em}
+
+/* personalizador: o coracao */
+.perso{border:1.5px solid var(--ouro);background:#fff;border-radius:6px;padding:20px;margin:22px 0}
+.perso .h{display:flex;align-items:center;gap:8px;font-family:'Cormorant Garamond',serif;font-size:21px;color:var(--bordo);margin-bottom:14px}
+.perso .h .b{background:var(--ouro);color:#3a2a10;font-family:'Inter';font-size:10px;font-weight:700;letter-spacing:.1em;padding:3px 8px;border-radius:3px;text-transform:uppercase}
+.fld{margin-bottom:12px}
+.fld label{display:block;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:#8a7a63;margin-bottom:5px}
+.inp{border:1px solid var(--line);border-radius:4px;padding:11px 13px;font-size:14px;color:var(--carvao);background:var(--marfim)}
+.preview{margin-top:14px;background:var(--marfim2);border:1px dashed var(--ouro);border-radius:5px;padding:14px;text-align:center}
+.preview .lb{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#8a7a63;margin-bottom:6px}
+.preview .val{font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--bordo)}
+
+.micro{text-align:center;font-size:13px;color:var(--salvia);font-weight:600;margin-top:12px}
+.bump{display:flex;align-items:center;gap:10px;background:var(--marfim2);border:1px solid var(--line);
+    border-radius:5px;padding:12px 14px;margin-top:14px;font-size:13px}
+.bump .bx{width:18px;height:18px;border:1.5px solid var(--ouro);border-radius:3px;flex:none}
+.bump b{color:var(--bordo)}
+
+/* bullets objecao */
+.bul{list-style:none;margin:22px 0;padding:0}
+.bul li{display:flex;gap:10px;font-size:14px;color:#4a4038;padding:7px 0;border-bottom:1px solid var(--line)}
+.bul li .ck{color:var(--salvia);font-weight:700}
+
+/* faixas full width abaixo */
+.band{padding:60px 0;border-top:1px solid var(--line)}
+.band.tint{background:var(--marfim2)}
+.arrives{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.arrives .ph{height:340px;border-radius:4px}
+.arrives h2{font-size:36px;color:var(--bordo);margin-bottom:14px;line-height:1.1}
+.arrives p{font-size:15px;color:#6a5f52;max-width:42ch}
+
+.pairbox{display:grid;grid-template-columns:.9fr 1.1fr;gap:36px;align-items:center;
+    background:var(--bordo);color:var(--marfim);border-radius:8px;overflow:hidden}
+.pairbox .ph{height:280px}
+.pairbox .tx{padding:36px 36px 36px 0}
+.pairbox .ey{color:var(--ouro)}
+.pairbox h2{font-size:34px;margin:8px 0 12px;color:#fff}
+.pairbox p{font-size:14.5px;opacity:.9;margin-bottom:20px;max-width:38ch}
+
+.rev{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:30px}
+.rc{background:#fff;border:1px solid var(--line);border-radius:4px;padding:18px}
+.rc .ph{height:130px;border-radius:3px;margin-bottom:12px}
+.rc p{font-size:13px;color:#4a4038;font-style:italic}
+.rc .who{font-size:11.5px;color:#8a7a63;margin-top:8px}
+
+.faq{max-width:720px;margin:26px auto 0}
+.qa{border-bottom:1px solid var(--line);padding:16px 0}
+.qa .q{display:flex;justify-content:space-between;font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--bordo)}
+.qa .a{font-size:13.5px;color:#6a5f52;margin-top:6px;max-width:60ch}
+
+.guar{text-align:center;margin-top:30px;font-size:13px;color:var(--salvia);font-weight:600}
+
+/* sticky mobile */
+.sticky{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--line);
+    box-shadow:0 -4px 20px rgba(0,0,0,.08);padding:10px 16px;display:flex;align-items:center;gap:14px;z-index:20}
+.sticky .p{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--bordo);font-weight:600;white-space:nowrap}
+.sticky .btn{flex:1;padding:13px}
+
+.center{text-align:center}
+.tag{position:fixed;top:8px;right:8px;background:var(--bordo);color:var(--marfim);font-size:10px;
+    letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;border-radius:3px;z-index:30}
+
+@media(max-width:820px){
+  .main,.arrives,.pairbox,.rev{grid-template-columns:1fr}
+  .nav{display:none}
+  .gal .ph{height:360px}
+  .title{font-size:32px}
+  .pairbox .tx{padding:0 24px 30px}
+}
+</style>
+</head>
+<body>
+
+<div class="ann">Won't tarnish · Won't turn your skin green · <b>Ships in a ready-to-give gift box — free</b></div>
+<header class="hd">
+  <nav class="nav"><span>Baptism</span><span>First Communion</span><span>Confirmation</span></nav>
+  <div class="logo">Amada</div>
+  <nav class="nav"><span>Protection</span><span>The Pair</span><span style="color:var(--bordo);font-weight:600">⌕ · ▣</span></nav>
+</header>
+
+<div class="wrap">
+  <div class="crumb">Home / First Communion / Her First Prayer</div>
+
+  <!-- BLOCO PRINCIPAL -->
+  <div class="main">
+    <!-- 1 · galeria -->
+    <div class="gal">
+      <div class="ph" data-cap="IMAGEM Linha B · cruz delicada no mármore claro ao lado da caixa de presente aberta"></div>
+      <div class="thumbs">
+        <div class="ph"></div><div class="ph"></div><div class="ph"></div><div class="ph"></div>
+      </div>
+    </div>
+
+    <!-- coluna info -->
+    <div>
+      <!-- 2 · titulo + preco ancorado -->
+      <div class="ey">First Communion</div>
+      <h1 class="title serif">Her First Prayer</h1>
+      <div class="stars">★★★★★ <small>1,240 reviews</small></div>
+      <div class="price"><s>$98</s> <b>$49</b> <span class="save">Save $49 today</span></div>
+
+      <!-- 3 · PERSONALIZADOR (o coracao, acima da dobra) -->
+      <div class="perso">
+        <div class="h serif">Personalize it <span class="b">the heart</span></div>
+        <div class="fld"><label>Engrave a name</label><div class="inp">Ava</div></div>
+        <div class="fld"><label>Add the date</label><div class="inp">05 · 14 · 2026</div></div>
+        <div class="fld"><label>Choose a verse (optional)</label><div class="inp" style="color:#8a7a63">“The Lord is my shepherd” ▾</div></div>
+        <div class="preview"><div class="lb">Live preview</div><div class="val serif">Ava · 05.14.2026</div></div>
+      </div>
+
+      <!-- 4 · CTA + micro-copy + bump -->
+      <button class="btn">Personalize &amp; add to cart</button>
+      <div class="micro">Arrives ready to give.</div>
+      <div class="bump"><div class="bx"></div><div>+ Add a <b>blessing card</b> with their name <b>($9.95)</b> — ritualizes the moment</div></div>
+
+      <!-- 5 · matadores de objecao -->
+      <ul class="bul">
+        <li><span class="ck">✓</span> Won't tarnish or turn skin green</li>
+        <li><span class="ck">✓</span> Hypoallergenic — stainless &amp; 14k gold-filled</li>
+        <li><span class="ck">✓</span> Adjustable chain, fits child to adult</li>
+        <li><span class="ck">✓</span> Water-safe for everyday wear</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 6 · como chega -->
+<section class="band tint"><div class="wrap"><div class="arrives">
+  <div>
+    <div class="ey">The moment</div>
+    <h2 class="serif">It doesn't arrive in a plastic bag.</h2>
+    <p>It arrives in a linen box, the name engraved, ready to place in their hands. The kind of gift they keep for life.</p>
+  </div>
+  <div class="ph" data-cap="IMAGEM · caixa de linho aberta, cruz gravada, cartão de bênção com o nome"></div>
+</div></div></section>
+
+<!-- 7 · upsell do par -->
+<section class="band"><div class="wrap"><div class="pairbox">
+  <div class="ph" data-cap="par de cruzes, madrinha + afilhada"></div>
+  <div class="tx">
+    <div class="ey">Make it a pair</div>
+    <h2 class="serif">The godmother and the child, matching.</h2>
+    <p>Two crosses, one bond — a thread between them, always. Give them together and save $19.</p>
+    <a href="#" style="display:inline-block;background:var(--ouro);color:#3a2a10;font-weight:600;padding:13px 26px;border-radius:2px;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none">Add the pair →</a>
+  </div>
+</div></div></section>
+
+<!-- 8 · provas por ocasiao -->
+<section class="band tint"><div class="wrap center">
+  <div class="ey">See how families gave it</div>
+  <h2 class="serif" style="font-size:34px;color:var(--bordo);margin-top:6px">Reviews from First Communion</h2>
+  <div class="rev">
+    <div class="rc"><div class="ph" data-cap="foto do cliente"></div><div class="stars">★★★★★</div><p>"For my goddaughter's First Communion. She hasn't taken it off since."</p><div class="who">— Carla M.</div></div>
+    <div class="rc"><div class="ph" data-cap="foto do cliente"></div><div class="stars">★★★★★</div><p>"The engraving is beautiful and it truly doesn't turn green. Worried for nothing."</p><div class="who">— Rosa D.</div></div>
+    <div class="rc"><div class="ph" data-cap="foto do cliente"></div><div class="stars">★★★★★</div><p>"Came in the sweetest box with the card. Felt like so much more than jewelry."</p><div class="who">— Elena F.</div></div>
+  </div>
+</div></section>
+
+<!-- 9 · garantia + FAQ -->
+<section class="band"><div class="wrap center">
+  <div class="ey">Before you ask</div>
+  <h2 class="serif" style="font-size:34px;color:var(--bordo);margin-top:6px">Questions, answered</h2>
+  <div class="faq">
+    <div class="qa"><div class="q">How long does engraving take? <span>+</span></div><div class="a">Each piece is engraved and shipped within 2–4 days.</div></div>
+    <div class="qa"><div class="q">Will it fit a child? <span>+</span></div><div class="a">Yes — the chain is adjustable, so it fits a child today and them grown.</div></div>
+    <div class="qa"><div class="q">Can I return a personalized piece? <span>+</span></div><div class="a">Yes. Even personalized, you're covered by our 60-day promise.</div></div>
+  </div>
+  <div class="guar">✓ 60-day money-back promise — even personalized · Free shipping over $75</div>
+</div></section>
+
+<!-- 10 · sticky mobile -->
+<div class="sticky">
+  <div class="p">$49</div>
+  <button class="btn">Personalize &amp; add →</button>
+</div>
+
+</body>
+</html>
