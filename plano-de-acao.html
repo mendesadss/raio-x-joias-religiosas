@@ -287,35 +287,85 @@
 <div class="note"><b>Como ler.</b> Os blocos com fundo bege e um rótulo no canto (ex: "IMAGEM Linha A · mãos, luz de vela") são onde entram as fotos geradas no Higgsfield. Todo o resto (textos, botões, preço, personalizador) já está no lugar final. A copy está em <b>inglês</b> porque a loja começa nos EUA; na fase 2 em espanhol, traduz os mesmos blocos sem mudar o layout.</div>
 
 <style>
-.bpframe{border:1px solid var(--line);border-radius:12px;overflow:hidden;margin:14px 0 6px;background:#fff;box-shadow:0 8px 30px rgba(0,0,0,.18)}
-.bpbar{display:flex;align-items:center;gap:8px;padding:10px 14px;background:var(--bg2);border-bottom:1px solid var(--line)}
-.bpbar .dot{width:11px;height:11px;border-radius:50%;background:#d9534f;flex:none}
-.bpbar .dot.y{background:#f0ad4e}.bpbar .dot.g{background:#5cb85c}
-.bpbar .url{flex:1;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:5px 12px;font-size:11.5px;color:var(--dim2);font-family:ui-monospace,Menlo,monospace;text-align:center}
-.bpbar a{font-size:11.5px;color:var(--acc);text-decoration:none;font-weight:600;white-space:nowrap}
-.bpframe iframe{width:100%;height:640px;border:0;display:block;background:#F5EFE6}
-.bpcap{font-size:12.5px;color:var(--dim2);margin:0 0 22px;text-align:center}
+.bpv h3{margin-top:6px}
+.bpv .cap{font-size:13px;color:var(--dim);margin:2px 0 14px}
+.bprow{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:12px 0 28px}
+.bpcol{min-width:0;display:flex;flex-direction:column;align-items:center}
+.bplbl{text-align:center;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc);margin-top:11px;font-weight:700}
+.bplbl a{color:var(--dim2);font-weight:600;text-decoration:none;letter-spacing:.02em;text-transform:none;font-size:11.5px}
+/* moldura de navegador (desktop) */
+.browser{width:100%;border:1px solid var(--line);border-radius:11px;overflow:hidden;background:#fff;box-shadow:0 10px 30px rgba(0,0,0,.20)}
+.bar{display:flex;align-items:center;gap:6px;padding:8px 11px;background:var(--bg2);border-bottom:1px solid var(--line)}
+.bar .dot{width:9px;height:9px;border-radius:50%;background:#d9534f;flex:none}
+.bar .dot.y{background:#f0ad4e}.bar .dot.g{background:#5cb85c}
+.bar .url{flex:1;background:var(--bg);border:1px solid var(--line);border-radius:5px;padding:4px 9px;font-size:10.5px;color:var(--dim2);font-family:ui-monospace,Menlo,monospace;text-align:center;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+/* moldura de celular */
+.phone{width:300px;max-width:100%;border:9px solid #17181c;border-radius:34px;background:#17181c;box-shadow:0 14px 36px rgba(0,0,0,.30);position:relative;padding-top:18px}
+.phone::before{content:'';position:absolute;top:7px;left:50%;transform:translateX(-50%);width:78px;height:5px;border-radius:3px;background:#3a3b40}
+/* palco escalado: o iframe renderiza na largura real do dispositivo e é reduzido pra caber */
+.shot{position:relative;overflow:hidden;background:#F5EFE6}
+.shot.desk{height:440px}
+.phone .shot{height:600px;border-radius:0 0 24px 24px}
+.shot iframe{border:0;display:block}
+@media(max-width:720px){.bprow{grid-template-columns:1fr;gap:26px}.shot.desk{height:380px}}
 </style>
 
-<h3>Home <span style="color:var(--dim2);font-size:13px;font-weight:400">· loja organizada por ocasião, não por produto</span></h3>
-<div class="bpframe">
-  <div class="bpbar"><span class="dot"></span><span class="dot y"></span><span class="dot g"></span>
-    <span class="url">amada.co</span>
-    <a href="mockup-home.html" target="_blank">Abrir em tela cheia ↗</a></div>
-  <iframe src="mockup-home.html" title="Mockup da Home" loading="lazy"></iframe>
+<div class="bpv">
+<!-- DESKTOP -->
+<h3>1 · Layout desktop <span style="color:var(--dim2);font-size:13px;font-weight:400">· Home à esquerda, página de produto à direita</span></h3>
+<p class="cap">Como as duas páginas ficam no computador. É o mesmo site: o que muda no celular é só o empilhamento dos blocos. Role dentro de cada janela pra ver a página inteira.</p>
+<div class="bprow">
+  <div class="bpcol">
+    <div class="browser">
+      <div class="bar"><span class="dot"></span><span class="dot y"></span><span class="dot g"></span><span class="url">amada.co</span></div>
+      <div class="shot desk" data-base="1280"><iframe src="mockup-home.html" title="Home desktop" loading="lazy"></iframe></div>
+    </div>
+    <div class="bplbl">Home &nbsp;·&nbsp; <a href="mockup-home.html" target="_blank">tela cheia ↗</a></div>
+  </div>
+  <div class="bpcol">
+    <div class="browser">
+      <div class="bar"><span class="dot"></span><span class="dot y"></span><span class="dot g"></span><span class="url">amada.co/products/her-first-prayer</span></div>
+      <div class="shot desk" data-base="1280"><iframe src="mockup-pdp.html" title="PDP desktop" loading="lazy"></iframe></div>
+    </div>
+    <div class="bplbl">Página de produto &nbsp;·&nbsp; <a href="mockup-pdp.html" target="_blank">tela cheia ↗</a></div>
+  </div>
 </div>
-<p class="bpcap">Role dentro da janela pra ver a página inteira. A navegação é por rito: quem chega sabe em 3 segundos onde está o presente do batismo, da comunhão, da crisma.</p>
 
-<h3 style="margin-top:26px">Página de Produto (PDP) <span style="color:var(--dim2);font-size:13px;font-weight:400">· a página de vendas, onde a conversão acontece</span></h3>
-<div class="bpframe">
-  <div class="bpbar"><span class="dot"></span><span class="dot y"></span><span class="dot g"></span>
-    <span class="url">amada.co/products/her-first-prayer</span>
-    <a href="mockup-pdp.html" target="_blank">Abrir em tela cheia ↗</a></div>
-  <iframe src="mockup-pdp.html" title="Mockup da Página de Produto" loading="lazy"></iframe>
+<!-- CELULAR (prioridade) -->
+<h3 style="margin-top:24px">2 · Layout celular <span style="color:var(--acc);font-size:13px;font-weight:700">· a prioridade — 90% do tráfego é mobile</span></h3>
+<p class="cap">É <b>aqui</b> que o layout tem que estar impecável. 9 em cada 10 clientes veem a loja assim, no celular. Desenhe pensando primeiro nesta tela; o desktop é a consequência.</p>
+<div class="bprow">
+  <div class="bpcol">
+    <div class="phone"><div class="shot" data-base="390"><iframe src="mockup-home.html" title="Home celular" loading="lazy"></iframe></div></div>
+    <div class="bplbl">Home &nbsp;·&nbsp; <a href="mockup-home.html" target="_blank">tela cheia ↗</a></div>
+  </div>
+  <div class="bpcol">
+    <div class="phone"><div class="shot" data-base="390"><iframe src="mockup-pdp.html" title="PDP celular" loading="lazy"></iframe></div></div>
+    <div class="bplbl">Página de produto &nbsp;·&nbsp; <a href="mockup-pdp.html" target="_blank">tela cheia ↗</a></div>
+  </div>
 </div>
-<p class="bpcap">O coração é o <b>personalizador acima da dobra</b> (com o preview ao vivo "Ava · 05.14.2026"): no instante em que a pessoa digita o nome, já comprou emocionalmente. Tudo abaixo só remove objeção.</p>
+</div>
 
-<div class="note good"><b>A ordem não é estética, é psicológica.</b> Personalizador no topo (compra emocional) → objeção de material, o esverdear (o medo nº1) → o momento da entrega (justifica o preço) → o par (dobra o ticket). É a mesma sequência das lojas MODELAR; a diferença é que a sua responde a objeção de esverdear <b>na própria página</b>, que é onde o comprador desse nicho trava.</div>
+<div class="note good"><b>A ordem não é estética, é psicológica.</b> Personalizador no topo (compra emocional) → objeção de material, o esverdear (o medo nº1) → o momento da entrega (justifica o preço) → o par (dobra o ticket). É a mesma sequência das lojas MODELAR; a diferença é que a sua responde a objeção de esverdear <b>na própria página</b>, que é onde o comprador desse nicho trava. E como 90% é mobile, o <b>add-to-cart fixo no rodapé</b> da PDP nunca deixa o botão sumir.</div>
+
+<script>
+(function(){
+  function fit(){
+    document.querySelectorAll('.bpv .shot').forEach(function(sh){
+      var base=+sh.getAttribute('data-base'), w=sh.clientWidth, h=sh.clientHeight;
+      if(!w||!h) return;
+      var s=w/base, ifr=sh.querySelector('iframe');
+      ifr.style.width=base+'px';
+      ifr.style.height=Math.ceil(h/s)+'px';
+      ifr.style.transform='scale('+s+')';
+      ifr.style.transformOrigin='top left';
+    });
+  }
+  window.addEventListener('load',fit);
+  window.addEventListener('resize',fit);
+  setTimeout(fit,250); setTimeout(fit,900);
+})();
+</script>
 </div></section>
 
 <!-- ORÇAMENTO E TESTE -->
